@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: normal;
+}
+
+body {
+  background-color: #181b1b !important; /* Ensuring the background color */
+  color: #ffffff !important;
+}
+
+/* Chat window (conversation area) */
+.chat-container {
+  @apply flex flex-col justify-between w-full max-w-5xl mx-auto h-[90vh] bg-[#181b1b] rounded-lg shadow-lg overflow-hidden;
+}
+
+/* Scrollbar styles */
+.chat-window::-webkit-scrollbar {
+  width: 8px; /* Adjust scrollbar width */
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #606060;
+  border-radius: 4px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+/* Ensure scrollbar is at the extreme right */
+.chat-window {
+  width: 100%;
+  padding-right: 0px;
+  scrollbar-gutter: stable both-edges; /* Prevents layout shift */
+}
+
+/* Chat messages */
+.chat-messages {
+  @apply flex-1 overflow-y-auto p-4 space-y-4;
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #1c1c1c;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.profile-dropdown button:hover {
+  background-color: #333;
+}
+
+/* Message bubbles */
+.user-message {
+  @apply bg-blue-500 text-white px-17 py-4 rounded-lg max-w-xs self-end;
+}
+
+.ai-message {
+  @apply bg-[#181b1b] text-gray-100 px-17 py-4 rounded-lg max-w-xs;
+}
+
+/* Input box */
+.input-box {
+  @apply flex flex-col bg-[#242424] p-3 rounded-lg shadow-lg;
+  position: fixed;
+  bottom: 20px; /* Adds space above the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 700px;
+  border: 1px solid #242424;
+}
+
+.input-field {
+  @apply flex-1 bg-[#242424] border-none outline-none p-2 text-gray-100 resize-none;
+  min-height: 40px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.send-button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600;
+}
+
+/* Buttons under input field */
+.input-actions {
+  @apply flex justify-start space-x-2 mt-2;
+}
+.input-actions button {
+  @apply bg-gray-700 text-gray-200 px-3 py-1 rounded-md hover:bg-gray-600;
+}
+
+/* Sidebar */
+.sidebar {
+  @apply bg-[#0d0d0d] text-gray-100 w-64 h-full shadow-md;
+}
+
+.sidebar-button {
+  @apply text-gray-100 hover:bg-[#333] p-3 rounded-md;
+}
+.input-container {
+  @apply flex flex-col items-center w-full bg-[#1e1e1e] pb-4;
+}
+
+.input-box {
+  @apply flex items-center w-[80%] bg-[#2a2a2a] px-4 py-3 rounded-3xl shadow-md;
+  position: relative;
+  bottom: 20px; /* Space from bottom */
+}
+
+.input-field {
+  @apply flex-1 bg-transparent border-none outline-none text-gray-100 resize-none;
+  min-height: 40px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.send-button {
+  @apply bg-blue-500 text-white p-3 rounded-full ml-2 hover:bg-blue-600;
+}
+
+.input-actions {
+  @apply flex space-x-3 mt-3;
+}
+
+.action-button {
+  @apply bg-[#333] text-gray-300 px-3 py-1 rounded-lg hover:bg-[#444];
+}
