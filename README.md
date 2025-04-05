@@ -16,6 +16,8 @@ This project focuses purely on the **UI/UX** and does **not** include backend or
 - 🌙 Minimalist dark mode interface
 - 🔁 Retry (resend) failed messages
 - 🧵 Multi-threaded chats with rename & delete options
+  
+![image](https://github.com/user-attachments/assets/0bd76e51-84a0-4b53-a98f-74d25659837c)
 
 ## 📦 Tech Stack
 
