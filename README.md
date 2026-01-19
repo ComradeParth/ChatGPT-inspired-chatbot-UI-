@@ -1,4 +1,5 @@
-# 💬 ChatGPT UI Clone  (https://chat-gpt-inspired-chatbot-ui.vercel.app/)
+# 💬 ChatGPT UI Clone  ([chat-gpt-inspired-chatbot-ui.vercel.app](https://chat-gpt-inspired-chatbot-p5wssxxyc-comradeparths-projects.vercel.app/)
+)
 
 A fully functional front-end clone of the ChatGPT interface built using **React.js**, **Vite**, and **Tailwind CSS**.  
 This project focuses purely on the **UI/UX** and does **not** include backend or AI integration.
