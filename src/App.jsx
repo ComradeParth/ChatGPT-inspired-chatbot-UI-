@@ -6,14 +6,14 @@ import Sidebar from './components/Sidebar';
 import ProfileInfo from './components/ProfileInfo';
 import './index.css';
 
-const apiKey = import.meta.env.API;
-
 const App = () => {
   const [messages, setMessages] = useState([]);
   const [userInput, setUserInput] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
   const [conversations, setConversations] = useState([]);
+
+  const apiKey = import.meta.env.VITE_GROQ_API_KEY;
 
   const handleSendMessage = async (message) => {
     if (!message.trim()) return;
@@ -33,10 +33,10 @@ const App = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${apiKey}`,
+            'Authorization': `Bearer ${apiKey}`,
           },
           body: JSON.stringify({
-            model: 'llama3-8b-8192',
+            model: 'llama-3.3-70b-versatile',
             messages: [{ role: 'user', content: message }],
           }),
         }
