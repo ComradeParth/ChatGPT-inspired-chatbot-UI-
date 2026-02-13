@@ -6,7 +6,7 @@ import Sidebar from './components/Sidebar';
 import ProfileInfo from './components/ProfileInfo';
 import './index.css';
 
-const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+const apiKey = import.meta.env.API;
 
 const App = () => {
   const [messages, setMessages] = useState([]);
